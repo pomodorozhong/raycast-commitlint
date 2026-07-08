@@ -6,7 +6,6 @@ A Raycast extension for composing [Conventional Commits](https://www.conventiona
 
 - **Type dropdown** — `feat`, `fix`, `docs`, `refactor`, `test`, and other standard types
 - **Scope, title, body, footer** — structured fields for the full commit message
-- **Live preview** — see the formatted message as you type
 - **Rule checker** — commitlint-aligned validation for capitalization, length limits, and more
 - **Copy or paste** — copy to clipboard or paste directly into your frontmost app
 
@@ -23,6 +22,13 @@ Open Raycast and run **Compose Commit**. Fill in the fields:
 | Footer | References, breaking changes, etc. (optional) |
 
 Press **Copy Commit Message** to copy, or **Paste Commit Message** (⌘⇧↵) to insert into the frontmost application.
+
+For a simpler flow, run **Quick Commit**:
+
+- Uses exactly 3 inline arguments: `type`, `scope`, `title`
+- No body/footer fields
+- Copies the commit header message directly
+- Example: `feat` + `auth` + `add password reset flow` -> `feat(auth): add password reset flow`
 
 ### Example output
 
@@ -46,7 +52,7 @@ The extension enforces these defaults (aligned with `@commitlint/config-conventi
 | Trailing period | Not allowed on title |
 | Type / scope casing | Lowercase |
 
-Failed rules appear in the **Rules** panel and block copy/paste until resolved.
+Failed rules block execution until resolved.
 
 ## Development
 

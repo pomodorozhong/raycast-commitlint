@@ -13,6 +13,45 @@
       "title": "Compose Commit",
       "description": "Compose a conventional commit message with type, scope, title, body, and footer",
       "mode": "view"
+    },
+    {
+      "name": "quick-commit",
+      "title": "Quick Commit",
+      "description": "Quickly compose a commit header with type, scope, and title",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "type",
+          "placeholder": "type",
+          "type": "dropdown",
+          "data": [
+            { "title": "feat", "value": "feat" },
+            { "title": "fix", "value": "fix" },
+            { "title": "docs", "value": "docs" },
+            { "title": "refactor", "value": "refactor" },
+            { "title": "test", "value": "test" },
+            { "title": "style", "value": "style" },
+            { "title": "perf", "value": "perf" },
+            { "title": "build", "value": "build" },
+            { "title": "ci", "value": "ci" },
+            { "title": "chore", "value": "chore" },
+            { "title": "revert", "value": "revert" }
+          ],
+          "required": true
+        },
+        {
+          "name": "scope",
+          "placeholder": "scope",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "title",
+          "placeholder": "title",
+          "type": "text",
+          "required": true
+        }
+      ]
     }
   ],
   "dependencies": {
